@@ -1,0 +1,4 @@
+<script type="text/javascript">
+  $(function() { parent.$.fancybox.close(); });
+  window.parent.location.href = '/shop/basket';
+</script>

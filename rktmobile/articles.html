@@ -1,0 +1,604 @@
+<!doctype html>
+<html>
+<head>
+<title>RKTandSIX</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scal=1,maximum-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" /> 
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
+<script type="text/javascript">
+   $(document).bind('mobileinit', function(event){
+
+     $.mobile.page.prototype.options.addBackBtn = "true";
+
+   })
+</script>
+<script type="text/javascript">
+
+
+/*$(document).bind('mobileinit', function(event){
+
+    $.mobile.dialog.prototype.options.closeBtnText="fermer"; si admettons on souhaite changer le texte dans toute les boites de dialogues
+})*/
+
+$('#btn-close').live('click' , function(event){ //live : permet d'associer a des objets pas encore crees des methodes qui s'executeront une fois l'objet créé
+
+   $('#boite').dialog('close'); //methode close s'execute et la boite se ferme par programmation
+
+})
+
+</script>
+
+<script type="text/javascript" src="../jquery/jquery.mobile-1.0.1.js">  </script>
+
+</head>
+
+<body>
+        <div data-role="page" id="home" data-theme="a" data-count-theme="e">
+              
+                
+                <div data-role="header" data-position="fixed" data-id="header" data-tap-toggle="false" data-theme="b">
+            <h1>RKT///SIX</h1>
+            <a href="index.html" data-icon="arrow-l" class="ui-btn-left" data-theme="a">Home</a> <!-- bouton retour -->
+            <a href="#login" data-icon="" class="ui-btn-right" data-theme="a" data-transition="slidedown">login</a>
+        </div>
+
+
+               <div data-role="content">
+                <ul data-role="listview" data-split-icon="plus" data-split-theme="b">
+
+                      <li>
+                        <a href="#detailvoh" data-rel="dialog">
+                            <img src="images/vohsmall.png">
+                            <h1>tshirt V.O.H</h1>
+
+                        </a>
+                       
+                    </li>
+                    <li>
+                        <a href="#detailhonor" data-rel="dialog">
+                            <img src="images/honorsmall.png">
+                            <h1> tshirt Honor</h1>
+
+                        </a>
+                        
+
+                    </li>
+
+                     <li>
+                        <a href="#detailbushido" data-rel="dialog">
+                            <img src="images/bushidosmall.png">
+                            <h1>tshirt Bushido</h1>
+
+                        </a>
+                       
+
+                    </li>
+
+                     <li>
+                        <a href="#detailbas" data-rel="dialog">
+                            <img src="images/bassmall.png">
+                            <h1>sweatpant</h1>
+
+                        </a>
+                        
+
+                    </li>
+
+                     <li>
+                        <a href="#detaildevil" data-rel="dialog">
+                            <img src="images/devilsmall.png">
+                            <h1>tshirt devil</h1>
+
+                        </a>
+                        
+
+                    </li>
+
+                     <li>
+                        <a href="#detailsamurai" data-rel="dialog">
+                            <img src="images/samuraismall.png">
+                            <h1>tshirt samurai</h1>
+
+                        </a>
+                        
+
+                    </li>
+
+                     <li>
+                        <a href="#detailko" data-rel="dialog">
+                            <img src="images/kosmall.png">
+                            <h1>tshirt K.O</h1>
+
+                        </a>
+                        
+
+                    </li>
+                    
+
+                     <li>
+                        <a href="#detailmike" data-rel="dialog">
+                            <img src="images/mikesmall.png">
+                            <h1>tshirt Iron Mike</h1>
+
+                        </a>
+                       
+
+                    </li>
+
+                     <li>
+                        <a href="#detailsweat" data-rel="dialog">
+                            <img src="images/sweatsmall.png">
+                            <h1>Hoodie WBD</h1>
+
+                        </a>
+                        
+
+                    </li>
+
+                     <li>
+                        <a href="#detailsword" data-rel="dialog">
+                            <img src="images/swordsmall.png">
+                            <h1>tshirt Sword</h1>
+
+                        </a>
+                        
+
+                    </li>
+
+                     <li>
+                        <a href="#detailspectrum" data-rel="dialog">
+                            <img src="images/spectrumsmall.png">
+                            <h1>tshirt Spectrum</h1>
+
+                        </a>
+                        
+
+                    </li>
+
+                     <li>
+                        <a href="#detailzip" data-rel="dialog">
+                            <img src="images/zipsmall.png">
+                            <h1>sweat zip</h1>
+
+                        </a>
+                        
+
+                    </li>
+
+                     <li>
+                        <a href="#detailjogging" data-rel="dialog">
+                            <img src="images/joggingsmall.png">
+                            <h1>Tracksuit</h1>
+
+                        </a>
+                        
+
+                    </li>
+
+
+
+                </ul> <br><br>
+                </div>
+
+               <div data-role="footer" data-position="fixed" data-id="youtt-footer" data-tap-toggle="false">
+            <div data-role="navbar" class="youtt-navbar">
+                <ul>
+                    <li><a href="articles.html" data-icon="shop" class="ui-btn-active ui-state-persist">SHOWROOM</a></li> <!-- permet de pointer licone en bleu quand on est sur cette meme page -->
+                    <li><a href="medias.html" data-icon="media">MEDIAS</a></li>
+                    <li><a href="contact.php" data-icon="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+         </div>  
+
+                <div data-role="page" id="detailvoh" >
+                  <div data-role="header">
+                        <h1>tshirt V.O.H</h1>
+                       <!-- <a href="#home" data-rel="back" data-icon="arrow-l" data-theme="b">back</a> -->
+                         
+                </div><br><br>
+                <img src="images/vohbig.png" style="margin-left:20px;">
+                
+                 <div data-role="content">
+                     
+                    
+                     <div data-role="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     </div>
+                     
+                 </div>
+                
+
+                   <div data-role="footer" data-position="fixed" data-id="youtt-footer" data-tap-toggle="false">
+            <div data-role="navbar" class="youtt-navbar">
+                <ul>
+                    <li><a href="articles.html" data-icon="shop">SHOWROOM</a></li> <!-- permet de pointer licone en bleu quand on est sur cette meme page -->
+                    <li><a href="medias.html" data-icon="media">MEDIAS</a></li>
+                    <li><a href="contact.php" data-icon="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+                 </div>
+
+
+                 <div data-role="page" id="detailhonor" >
+                  <div data-role="header">
+                        <h1>tshirt Honor</h1>
+                       <!-- <a href="#home" data-rel="back" data-icon="arrow-l" data-theme="b">back</a> -->
+                         
+                </div><br><br>
+                <img src="images/honorbig.png" style="margin-left:20px;">
+                
+                 <div data-role="content">
+                     
+                    
+                     <div data-role="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     </div>
+                     
+                 </div>
+                 
+
+                   <div data-role="footer" data-position="fixed" data-id="youtt-footer" data-tap-toggle="false">
+            <div data-role="navbar" class="youtt-navbar">
+                <ul>
+                    <li><a href="articles.html" data-icon="shop">SHOWROOM</a></li> <!-- permet de pointer licone en bleu quand on est sur cette meme page -->
+                    <li><a href="medias.html" data-icon="media">MEDIAS</a></li>
+                    <li><a href="contact.php" data-icon="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+                 </div>
+
+                 <div data-role="page" id="detailbushido" >
+                  <div data-role="header">
+                        <h1>tshirt Bushido</h1>
+                       <!-- <a href="#home" data-rel="back" data-icon="arrow-l" data-theme="b">back</a> -->
+                         
+                </div><br><br>
+                <img src="images/bushidobig.png" style="margin-left:20px;">
+                
+                 <div data-role="content">
+                     
+                    
+                     <div data-role="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     </div>
+                     
+                 </div>
+                 
+
+                   <div data-role="footer" data-position="fixed" data-id="youtt-footer" data-tap-toggle="false">
+            <div data-role="navbar" class="youtt-navbar">
+                <ul>
+                    <li><a href="articles.html" data-icon="shop">SHOWROOM</a></li> <!-- permet de pointer licone en bleu quand on est sur cette meme page -->
+                    <li><a href="medias.html" data-icon="media">MEDIAS</a></li>
+                    <li><a href="contact.php" data-icon="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+                 </div>
+
+                   <div data-role="page" id="detailbas" >
+                  <div data-role="header">
+                        <h1>Sweatpant</h1>
+                       <!-- <a href="#home" data-rel="back" data-icon="arrow-l" data-theme="b">back</a> -->
+                         
+                </div><br><br>
+                <img src="images/basbig.png" style="margin-left:15px;">
+                
+                 <div data-role="content">
+                     
+                    
+                     <div data-role="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     </div>
+                     
+                 </div>
+                 
+
+                   <div data-role="footer" data-position="fixed" data-id="youtt-footer" data-tap-toggle="false">
+            <div data-role="navbar" class="youtt-navbar">
+                <ul>
+                    <li><a href="articles.html" data-icon="shop">SHOWROOM</a></li> <!-- permet de pointer licone en bleu quand on est sur cette meme page -->
+                    <li><a href="medias.html" data-icon="media">MEDIAS</a></li>
+                    <li><a href="contact.php" data-icon="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+                 </div>
+
+
+                   <div data-role="page" id="detaildevil" >
+                  <div data-role="header">
+                        <h1>tshirt Devil</h1>
+                       <!-- <a href="#home" data-rel="back" data-icon="arrow-l" data-theme="b">back</a> -->
+                         
+                </div><br><br>
+                <img src="images/devilbig.png" style="margin-left:20px;">
+                
+                 <div data-role="content">
+                     
+                    
+                     <div data-role="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     </div>
+                     
+                 </div>
+                 
+
+                   <div data-role="footer" data-position="fixed" data-id="youtt-footer" data-tap-toggle="false">
+            <div data-role="navbar" class="youtt-navbar">
+                <ul>
+                    <li><a href="articles.html" data-icon="shop">SHOWROOM</a></li> <!-- permet de pointer licone en bleu quand on est sur cette meme page -->
+                    <li><a href="medias.html" data-icon="media">MEDIAS</a></li>
+                    <li><a href="contact.php" data-icon="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+                 </div>
+
+                 <div data-role="page" id="detailsamurai" >
+                  <div data-role="header">
+                        <h1>tshirt Samurai</h1>
+                       <!-- <a href="#home" data-rel="back" data-icon="arrow-l" data-theme="b">back</a> -->
+                         
+                </div><br><br>
+                <img src="images/samuraibig.png" style="margin-left:20px;">
+                
+                 <div data-role="content">
+                     
+                    
+                     <div data-role="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     </div>
+                     
+                 </div>
+                 
+
+                   <div data-role="footer" data-position="fixed" data-id="youtt-footer" data-tap-toggle="false">
+            <div data-role="navbar" class="youtt-navbar">
+                <ul>
+                    <li><a href="articles.html" data-icon="shop">SHOWROOM</a></li> <!-- permet de pointer licone en bleu quand on est sur cette meme page -->
+                    <li><a href="medias.html" data-icon="media">MEDIAS</a></li>
+                    <li><a href="contact.php" data-icon="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+                 </div>
+
+
+                 <div data-role="page" id="detailko" >
+                  <div data-role="header">
+                        <h1>tshirt Devil</h1>
+                       <!-- <a href="#home" data-rel="back" data-icon="arrow-l" data-theme="b">back</a> -->
+                         
+                </div><br><br>
+                <img src="images/kobig.png" style="margin-left:20px;">
+                
+                 <div data-role="content">
+                     
+                    
+                     <div data-role="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     </div>
+                     
+                 </div>
+                 
+
+                   <div data-role="footer" data-position="fixed" data-id="youtt-footer" data-tap-toggle="false">
+            <div data-role="navbar" class="youtt-navbar">
+                <ul>
+                    <li><a href="articles.html" data-icon="shop">SHOWROOM</a></li> <!-- permet de pointer licone en bleu quand on est sur cette meme page -->
+                    <li><a href="medias.html" data-icon="media">MEDIAS</a></li>
+                    <li><a href="contact.php" data-icon="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+                 </div>
+
+
+
+                   <div data-role="page" id="detailmike" >
+                  <div data-role="header">
+                        <h1>tshirt Iron Mike</h1>
+                       <!-- <a href="#home" data-rel="back" data-icon="arrow-l" data-theme="b">back</a> -->
+                         
+                </div><br><br>
+                <img src="images/mikebig.png" style="margin-left:20px;">
+                
+                 <div data-role="content">
+                     
+                    
+                     <div data-role="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     </div>
+                     
+                 </div>
+                 
+
+                   <div data-role="footer" data-position="fixed" data-id="youtt-footer" data-tap-toggle="false">
+            <div data-role="navbar" class="youtt-navbar">
+                <ul>
+                    <li><a href="articles.html" data-icon="shop">SHOWROOM</a></li> <!-- permet de pointer licone en bleu quand on est sur cette meme page -->
+                    <li><a href="medias.html" data-icon="media">MEDIAS</a></li>
+                    <li><a href="contact.php" data-icon="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+                 </div>
+
+
+
+
+                   <div data-role="page" id="detailsweat" >
+                  <div data-role="header">
+                        <h1>Hoodie W.B.D</h1>
+                       <!-- <a href="#home" data-rel="back" data-icon="arrow-l" data-theme="b">back</a> -->
+                         
+                </div><br><br>
+                <img src="images/sweatbig.png" style="margin-left:20px;">
+                <img src="images/sweat2.png" style="margin-left:20px;">
+                
+                 <div data-role="content">
+                     
+                    
+                     <div data-role="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     </div>
+                     
+                 </div>
+                
+
+                   <div data-role="footer" data-position="fixed" data-id="youtt-footer" data-tap-toggle="false">
+            <div data-role="navbar" class="youtt-navbar">
+                <ul>
+                    <li><a href="articles.html" data-icon="shop">SHOWROOM</a></li> <!-- permet de pointer licone en bleu quand on est sur cette meme page -->
+                    <li><a href="medias.html" data-icon="media">MEDIAS</a></li>
+                    <li><a href="contact.php" data-icon="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+                 </div>
+
+
+                   <div data-role="page" id="detailsword" >
+                  <div data-role="header">
+                        <h1>tshirt Sword</h1>
+                       <!-- <a href="#home" data-rel="back" data-icon="arrow-l" data-theme="b">back</a> -->
+                         
+                </div><br><br>
+                <img src="images/swordbig.png" style="margin-left:20px;">
+                
+                 <div data-role="content">
+                     
+                    
+                     <div data-role="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     </div>
+                     
+                 </div>
+                 
+
+                   <div data-role="footer" data-position="fixed" data-id="youtt-footer" data-tap-toggle="false">
+            <div data-role="navbar" class="youtt-navbar">
+                <ul>
+                    <li><a href="articles.html" data-icon="shop">SHOWROOM</a></li> <!-- permet de pointer licone en bleu quand on est sur cette meme page -->
+                    <li><a href="medias.html" data-icon="media">MEDIAS</a></li>
+                    <li><a href="contact.php" data-icon="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+                 </div>
+
+
+                   <div data-role="page" id="detailspectrum" >
+                  <div data-role="header">
+                        <h1>tshirt Spectrum</h1>
+                       <!-- <a href="#home" data-rel="back" data-icon="arrow-l" data-theme="b">back</a> -->
+                         
+                </div><br><br>
+                <img src="images/spectrumbig.png" style="margin-left:20px;">
+                
+                 <div data-role="content">
+                     
+                    
+                     <div data-role="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     </div>
+                     
+                 </div>
+                 
+
+                   <div data-role="footer" data-position="fixed" data-id="youtt-footer" data-tap-toggle="false">
+            <div data-role="navbar" class="youtt-navbar">
+                <ul>
+                    <li><a href="articles.html" data-icon="shop">SHOWROOM</a></li> <!-- permet de pointer licone en bleu quand on est sur cette meme page -->
+                    <li><a href="medias.html" data-icon="media">MEDIAS</a></li>
+                    <li><a href="contact.php" data-icon="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+                 </div>
+
+
+                   <div data-role="page" id="detailzip" >
+                  <div data-role="header">
+                        <h1>Sweat zip</h1>
+                       <!-- <a href="#home" data-rel="back" data-icon="arrow-l" data-theme="b">back</a> -->
+                         
+                </div><br><br>
+                <img src="images/zipbig.png" style="margin-left:20px;">
+                
+                 <div data-role="content">
+                     
+                    
+                     <div data-role="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     </div>
+                     
+                 </div>
+                 
+
+                   <div data-role="footer" data-position="fixed" data-id="youtt-footer" data-tap-toggle="false">
+            <div data-role="navbar" class="youtt-navbar">
+                <ul>
+                    <li><a href="articles.html" data-icon="shop">SHOWROOM</a></li> <!-- permet de pointer licone en bleu quand on est sur cette meme page -->
+                    <li><a href="medias.html" data-icon="media">MEDIAS</a></li>
+                    <li><a href="contact.php" data-icon="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+                 </div>
+
+
+                   <div data-role="page" id="detailjogging" >
+                  <div data-role="header">
+                        <h1>Tracksuit</h1>
+                       <!-- <a href="#home" data-rel="back" data-icon="arrow-l" data-theme="b">back</a> -->
+                         
+                </div><br><br>
+                <img src="images/joggingbig.png" style="margin-left:20px;">
+                <img src="images/jogging2big.png" style="margin-left:20px;">
+                
+                 <div data-role="content">
+                     
+                    
+                     <div data-role="content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     </div>
+                     
+                 </div>
+                 
+
+                   <div data-role="footer" data-position="fixed" data-id="youtt-footer" data-tap-toggle="false">
+            <div data-role="navbar" class="youtt-navbar">
+                <ul>
+                    <li><a href="articles.html" data-icon="shop">SHOWROOM</a></li> <!-- permet de pointer licone en bleu quand on est sur cette meme page -->
+                    <li><a href="medias.html" data-icon="media">MEDIAS</a></li>
+                    <li><a href="contact.php" data-icon="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+                 </div>
+
+
+
+
+
+         
+
+
+
+
+
+        
+
+
+
+
+</body>
+
+</html>

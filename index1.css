@@ -1,0 +1,39 @@
+/*  ecommerce / eshop  */
+
+.menuGauche {background-color:black;width: 260px;min-height: 767px;float: left;position:fixed;}
+
+.home a{color:blue;text-decoration:none; font-family:Stencilia-Bold;font-size:20px;}
+
+.box {display:block; border:2px solid grey; width:100px; height: 30px; margin:2px;  font-family:Stencilia-A; font-size:18px; text-align:center; padding:3px; padding-top:5px; float:left;}
+.box a {
+ text-decoration:none;
+ color: white;
+}
+
+.social {display:block;float:left;margin:4px; }
+
+.container {margin-left:15px;}
+
+.formulaire {margin-left:15px;}
+.new {color:white; font-family:arial; font-size:15px;}
+.formulaire input{ width:100px;}
+.formulaire button {color: black; }
+
+.centre {position:absolute;margin-left:270px;}
+
+.menuDroit {background-color:black;width: 40px;min-height: 765px;margin-left:1530px;position:fixed;z-index: 1;}
+
+.shop {background-color:#BF111D;color:black;font-family:impact; font-weight:bold;font-size:18px;margin:5px;}
+
+.shop h2 {text-align:center;}
+
+.logo {position:relative; bottom:0px;}
+
+.newsletter {border-bottom: 1px solid;color:#E3E4E6;}
+
+.loupe {position:relative; top:252px;}
+
+.panier {position:relative; top:292px;}
+
+.enveloppe {position:relative; top:332px;}
+/* fin ecommerce / eshop */

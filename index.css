@@ -1,0 +1,31 @@
+/*acceuil*/
+html, body { margin: 0; padding: 0; height:auto; }
+#menuhaut {background-color: black; height:155px;}
+
+
+.rouge { background-color:#D10D20; height: 5px;}
+
+#menu {text-align: right; font-family:Stencilia-A; text-decoration:none; color:grey; }
+#menu b {font-family:Stencilia-A;}
+
+#centre {height:437px;margin-top:2px;margin-bottom:0px;}
+
+#footer {background-color: black;color:#6E161F;font-family:Stencilia-A ;font-weight: bold;text-align: center;}
+#footer h1{text-decoration:line-through;}
+
+#contact {text-align: right; }
+
+/*fin acceuil */
+
+/*slider*/
+#slider ul, #slider li { list-style:none; height:450px; margin-top:0px;margin-bottom:0px;}
+/*fin slider */
+
+fieldset { width:400px; margin-left:450px; margin-top:45px; background-color:#E6E1E3;}
+
+/* copyright */ 
+.rights{ height: 20px; color:black; margin-top:10px;}
+.rights a{text-decoration:none; font-weight:bold; color:black; margin-left: 20px;}
+.copyright {font-weight: bold; margin-left : 500px; padding-top: 20px;}
+
+#black{height:35px;background-color:black;}
